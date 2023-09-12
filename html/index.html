@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <section>
+        <!-- <img src="/Calculator/image/background-1.jpg" alt="background-1" id="image-sec"> -->
+        <div class="upper">
+            <div id="color">
+                <input type="text" id="result" readonly>
+            </div>
+        </div>
+        <div class="lower">
+            <div id="black">
+                <ul id="list">
+                    <button onclick="inputM('7')">7</button>
+                    <button onclick="inputM('8')">8</button>
+                    <button onclick="inputM('9')">9</button>
+                    <button onclick="inputM('+')">+</button>
+                    <button onclick="inputM('4')">4</button>
+                    <button onclick="inputM('5')">5</button>
+                    <button onclick="inputM('6')">6</button>
+                    <button onclick="inputM('-')">-</button>
+                    <button onclick="inputM('1')">1</button>
+                    <button onclick="inputM('2')">2</button>
+                    <button onclick="inputM('3')">3</button>
+                    <button onclick="inputM('*')">*</button>
+                    <button onclick="inputM('0')">0</button>
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="calculateResult()">=</button>
+                    <button onclick="inputM('/')">/</button>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="/javaScript/index.js"></script>
+</body>
+
+</html>

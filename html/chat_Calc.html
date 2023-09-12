@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* CSS for styling the calculator (optional) */
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+        <div id="buttons">
+            <button onclick="inputM('7')">7</button>
+            <button onclick="inputM('8')">8</button>
+            <button onclick="inputM('9')">9</button>
+            <button onclick="inputM('+')">+</button>
+            <button onclick="inputM('4')">4</button>
+            <button onclick="inputM('5')">5</button>
+            <button onclick="inputM('6')">6</button>
+            <button onclick="inputM('-')">-</button>
+            <button onclick="inputM('1')">1</button>
+            <button onclick="inputM('2')">2</button>
+            <button onclick="inputM('3')">3</button>
+            <button onclick="inputM('*')">*</button>
+            <button onclick="inputM('0')">0</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="calculateResult()">=</button>
+            <button onclick="inputM('/')">/</button>
+            <button onclick="deleteSingle()">x</button>
+        </div>
+    </div>
+
+    <script>
+        let displayValue = '';
+
+        function inputM(value) {
+            displayValue += value;
+            document.getElementById('display').value = displayValue;
+        }
+
+        function clearDisplay() {
+            displayValue = '';
+            document.getElementById('display').value = '';
+        }
+        function deleteSingle() {
+            displayValue=displayValue.substr(0,displayValue.length-1);
+            document.getElementById('result').value=displayValue;
+        }
+        function calculateResult() {
+            try {
+                displayValue = eval(displayValue);
+                document.getElementById('display').value = displayValue;
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>
